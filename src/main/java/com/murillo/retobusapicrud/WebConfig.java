@@ -10,10 +10,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         // Permite solicitudes desde localhost:5173 (ajusta el puerto si es diferente)
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173")  // Permitir solo desde localhost:5173
-                .allowedMethods("GET", "POST", "PUT", "DELETE")  // Métodos HTTP permitidos
-                .allowedHeaders("*")  // Permitir todos los encabezados
-                .allowCredentials(true); // Permite que se envíen credenciales si es necesario
+
     }
 }
