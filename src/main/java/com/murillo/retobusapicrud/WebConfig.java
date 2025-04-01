@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        // Permite solicitudes desde localhost:5173 (ajusta el puerto si es diferente)
-        registry.addMapping("/**").allowedOrigins("http://localhost:5173");
+        // Permite solicitudes desde cualquier origen (útil para pruebas)
+        registry.addMapping("/**").allowedOrigins("*");
     }
 }
